@@ -24,7 +24,7 @@ async function uploadToGit(req, res) {
         simpleGit.addConfig('user.name','jay-kanakala');
         // Add remore repo url as origin to repo
         console.log("addbefore");
-        simpleGitPromise.addRemote('origin',gitHubUrl);
+        simpleGitPromise.addRemote('uploadfile3',gitHubUrl);
         // Add all files for commit
         simpleGitPromise.add('.')
             .then(
@@ -42,7 +42,7 @@ async function uploadToGit(req, res) {
                 console.log('failed commmit');
         });
         // Finally push to online repository
-        simpleGitPromise.push('origin','master')
+        simpleGitPromise.push('uploadfile3','master')
             .then((success) => {
             console.log('repo successfully pushed');
             },(failed)=> {

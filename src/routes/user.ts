@@ -11,7 +11,7 @@ const simpleGitPromise = require('simple-git/promise')();
 async function uploadToGit(req, res) {
     try {
         // change current directory to repo directory in local
-        shellJs.cd('c:/work/subbu/');
+        shellJs.cd('c:/work/subbu-git/simplegit');
         // Repo name
         const repo = 'simplegit';  //Repo name
         // User name and password of your GitHub
